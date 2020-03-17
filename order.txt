@@ -1,0 +1,16 @@
+1 - silzhar@picuet:~/Documentos/transparentCDN$
+    docker-compose run web django-admin.py startproject transparentAPP .
+
+2 -  sudo chmod -R 777 db-data/
+
+3 -  docker-compose run web python3 manage.py migrate
+
+4 - django-admin startproject transparentAPP
+
+5 - silzhar@picuet:~/Documentos/transparentCDN/transparentAPP$ python3 manage.py migrate
+
+6 - silzhar@picuet:~/Documentos/transparentCDN/transparentAPP/transparentAPP$ nano settings.py
+    ALLOWED_HOSTS = ['.http://localhost:8000/', '.https://www.transparentcdn.com/']
+    // Los puntos antes del comiendo es para acceder a todos los subdominios.
+
+7 - 

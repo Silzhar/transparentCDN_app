@@ -25,7 +25,7 @@ SECRET_KEY = 'l3$et@o@+*h!y7cic-)8@52e!3&r9f04n(kb@fdyy(!01mk&3u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0','.http://localhost:8000/', '.https://www.transparentcdn.com/']
 
 
 # Application definition
