@@ -13,4 +13,15 @@
     ALLOWED_HOSTS = ['.http://localhost:8000/', '.https://www.transparentcdn.com/']
     // Los puntos antes del comiendo es para acceder a todos los subdominios.
 
-7 - 
+// Con http://localhost:8000/admin 
+7 - http://0.0.0.0:8000/admin/login/?next=/admin/   
+
+
+// Runserver .
+8 - silzhar@picuet:~/Documentos/transparentCDN/transparentAPP$
+    python3 manage.py runserver 0.0.0.0:8000
+
+ // Para ver que puertos estan activos .
+--  sudo apt install net-tools
+
+$ netstat -tanp

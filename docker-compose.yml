@@ -11,12 +11,13 @@ services:
             - MYSQL_USER=user
             - MYSQL_PASSWORD=pass
         ports:
-            - "8002:3306"
+            - "8004:3306"
     web:
         restart: always
         build: .
         command: python3 manage.py runserver 0.0.0.0:8000
         volumes:
+            - .:code
             - .:/transparentAPP:/code
             - ./transparentAPP/templates:/var/www/website/transparentAPP/templates
         ports:
