@@ -9,9 +9,9 @@ services:
         build: .
         command: python3 manage.py runserver 0.0.0.0:8000
         volumes:
-            - .:/transparentAPP:/code
+            - .:/transparentCDN_app/transparentAPP:/code
             - ./html:/var/www/website/html
-            - ./transparentAPP/templates:/var/www/website/transparentAPP/templates
+            - ./transparentCDN_app/transparentAPP/templates:/var/www/website/transparentAPP/templates
         ports:
             - "8000:8000"
         depends_on: 

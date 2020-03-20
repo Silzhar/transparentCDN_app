@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['0.0.0.0', '.http://localhost:8000/', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'test_speed.apps.TestSpeedConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

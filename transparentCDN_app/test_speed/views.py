@@ -6,5 +6,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def index(request):   
-    return HttpResponse("index transparent cdn")
+    
+def index(request): 
+    
+  return HttpResponse("index transparent cdn" )
