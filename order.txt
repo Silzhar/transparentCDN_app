@@ -21,7 +21,46 @@
 8 - silzhar@picuet:~/Documentos/transparentCDN/transparentAPP$
     python3 manage.py runserver 0.0.0.0:8000
 
+/------------------------------------------------------------------------------------/
+/------------------------------------------------------------------------------------/
+
+
  // Para ver que puertos estan activos .
 --  sudo apt install net-tools
 
 $ netstat -tanp
+
+/------------------------------------------------------------------------------------/
+/------------------------------------------------------------------------------------/
+
+
+// Mysql .
+
+// Instalar Mysql para python 3 .
+- python3 -m pip install PyMySQL
+
+- create database transparentCDN;
+
+- create table app(Id int(255)primary key auto_increment,user_name varchar(100)
+   not null,email varchar(100) not null, telephone int(9), question varchar(255));
+
+-  create USER user@localhost IDENTIFIED BY 'pass';
+
+-  grant all privileges on transparentCDN. * to user@localhost;
+
+- flush privileges;
+
+
+/------------------------------------------------------------------------------------/
+/------------------------------------------------------------------------------------/
+
+// Install speedtest .
+
+- sudo apt-get install wget python
+
+- sudo pip install speedtest-cli
+
+-  wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+
+- chmod +x speedtest-cli
+
