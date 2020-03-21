@@ -76,13 +76,14 @@ $ netstat -tanp
 
 // Shell Django .
 -  python manage.py shell
-    >>> from test_speed.models import TestSpeed
-    >>> TestSpeed.objects.all()
-    >>> q = TestSpeed()
-    >>> q.save()
-    >>> q.id 
-    >>> q.speedtester
-    
+
+    from test_speed.models import TestSpeed
+    TestSpeed.objects.all()
+    q = TestSpeed()
+    q.save()
+    q.id 
+    q.speedtester
+
     # Guardar en bbdd .
-    >>> TestSpeed.objects.all()
+    TestSpeed.objects.all()
     <QuerySet [<TestSpeed: TestSpeed object>, <TestSpeed: TestSpeed object>]>

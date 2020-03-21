@@ -9,10 +9,16 @@ import dns.resolver
 class TestSpeed(models.Model):
 
     speedtester = dns.resolver.query('transparentcdn.com', 'MX')
+    dnsDates = []
     for rdata in speedtester:
-        print('Host ', rdata.exchange, 'preference ', rdata.preference)
-    
-    def __str__(self):
-        return self.rdata.exchange , self.rdata.preference
+        host = rdata.exchange
+        server = rdata.preference
+        dnsDates.append(host)
+        dnsDates.append(server)
+        
+    print(dnsDates)
+
+
+
     
 
