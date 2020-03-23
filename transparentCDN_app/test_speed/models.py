@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+import speedtest
 import dns.resolver
 
 
@@ -16,7 +16,23 @@ class TestSpeed(models.Model):
         dnsDates.append(host)
         dnsDates.append(server)
         
-    print(dnsDates)
+    def __str__(self):
+        ouput = self.dnsDates[0] + ',' + self.dnsDates[1]
+        return ouput
+
+
+
+
+"""
+    
+        speedtester = speedtest.Speedtest()
+    server = speedtester.get_best_server()
+    totalQuery = speedtester.download()
+
+    def __str__(self):
+        return self.server , self.totalQuery
+
+    """
 
 
 

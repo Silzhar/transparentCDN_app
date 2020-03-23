@@ -1,25 +1,19 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.shortcuts import render
-
 from django.http import HttpResponse
 from django.template import loader
-
 from .models import TestSpeed
 
-
-    
+  
 def index(request): 
     showTest = TestSpeed
-    ouput = ', ', showTest
+    return render(request, 'test_speed/index.html', {'test': showTest})
 
-    template = loader.get_template('test/index.html')
-    indexTemplate = {
-        'Test speed query : ':ouput,
-    }
-    return HttpResponse(template.render(indexTemplate, request))
-  #  return HttpResponse("index transparent cdn" )
+    # template = loader.get_template('test_speed/index.html')
+    # indexTemplate = {
+    #     'Test speed query : ':showTest}
+    # return HttpResponse(template.render(indexTemplate, request))
 
 
 # def speedId(request):
