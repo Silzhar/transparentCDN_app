@@ -87,3 +87,21 @@ $ netstat -tanp
     # Guardar en bbdd .
     TestSpeed.objects.all()
     <QuerySet [<TestSpeed: TestSpeed object>, <TestSpeed: TestSpeed object>]>
+
+
+
+    <!-- <ul>
+        {% for test in template %}
+            <li>
+                <a href="/test_speed/{{  }}/"></a>
+            </li>
+        {% endfor %}
+    </ul> -->
+
+
+    {% if template %}
+    <a href="/test_speed/{{ indexTemplate }}/"></a>
+
+{% else %}
+    <p>Fallo en programa</p>
+{% endif %}
