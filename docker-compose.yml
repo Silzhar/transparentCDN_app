@@ -13,6 +13,6 @@ services:
             - ./html:/var/www/website/html
             - ./transparentCDN_app/transparentAPP/templates:/var/www/website/transparentAPP/templates
         ports:
-            - "8000:8000"
+            - "8002:8002"
         depends_on: 
             - database
