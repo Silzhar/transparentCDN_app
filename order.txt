@@ -10,7 +10,7 @@
 5 - silzhar@picuet:~/Documentos/transparentCDN/transparentAPP$ python3 manage.py migrate
 
 6 - silzhar@picuet:~/Documentos/transparentCDN/transparentAPP/transparentAPP$ nano settings.py
-    ALLOWED_HOSTS = ['.http://localhost:8000/', '.https://www.transparentcdn.com/']
+    ALLOWED_HOSTS = ['.http://localhost:8000/']
     // Los puntos antes del comiendo es para acceder a todos los subdominios.
 
 // Con http://localhost:8000/admin 
@@ -88,20 +88,3 @@ $ netstat -tanp
     TestSpeed.objects.all()
     <QuerySet [<TestSpeed: TestSpeed object>, <TestSpeed: TestSpeed object>]>
 
-
-
-    <!-- <ul>
-        {% for test in template %}
-            <li>
-                <a href="/test_speed/{{  }}/"></a>
-            </li>
-        {% endfor %}
-    </ul> -->
-
-
-    {% if template %}
-    <a href="/test_speed/{{ indexTemplate }}/"></a>
-
-{% else %}
-    <p>Fallo en programa</p>
-{% endif %}
