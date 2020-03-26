@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-import dns.resolver
+# import dns.resolver
 import speedtest
-import socket
-
+# import requests, socket
 
 class TestSpeed(models.Model):
 
-    urlExternal = 'www.transparentcdn.com'
-    hostAddress = socket.gethostbyname(urlExternal)
+    # urlExternal = requests.get('http://www.transparentcdn.com/')
+    # hostAddress = str((urlExternal, '',  socket.SOCK_DGRAM))
 
-    speedtester = speedtest.Speedtest(source_address=hostAddress)
+    # speedtester = speedtest.Speedtest(source_address=hostAddress)
+    speedtester = speedtest.Speedtest()
     
+
     server = speedtester.get_best_server()
     downloadSpeed = speedtester.download()
     uploadSpeed = speedtester.upload()
