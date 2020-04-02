@@ -3,15 +3,14 @@ from __future__ import unicode_literals
 from django.db import models
 # import dns.resolver
 import speedtest
-# import requests, socket
+import socket, threading
 
 class TestSpeed(models.Model):
 
-    # urlExternal = requests.get('http://www.transparentcdn.com/')
-    # hostAddress = str((urlExternal, '',  socket.SOCK_DGRAM))
-
-    # speedtester = speedtest.Speedtest(source_address=hostAddress)
-    speedtester = speedtest.Speedtest()
+    urlExternal = 'www.transparentcdn.com'
+    hostAddressIP = socket.gethostbyname(urlExternal)
+    speedtester = speedtest.Speedtest('', hostAddressIP)
+    # speedtester = speedtest.Speedtest()
     
 
     server = speedtester.get_best_server()
@@ -24,6 +23,10 @@ class TestSpeed(models.Model):
     ouputDates.append(uploadSpeed)
 
     ouput = str(ouputDates)
+
+    def conect(self, socket_client):
+      pass
+
 
     def __str__(self):
         return self.ouput
